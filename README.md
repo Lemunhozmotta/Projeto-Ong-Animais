@@ -235,7 +235,41 @@ Para Administradores
 ✅ Transações — Uso de begin_transaction() para operações críticas
 
 📸 Screenshots
-Adicione aqui as imagens do sistema em funcionamento
+
+### 🏠 Página Inicial
+
+![Página Inicial](screenshots/home.png)
+
+### ❤️ Sistema de Adoção
+
+![Sistema de Adoção](screenshots/adocao.png)
+
+### 💰 Sistema de Doações 
+
+![Sistema de Doações](screenshots/doacao.png)
+
+### 💰 Sistema de Doações com PIX
+
+![Sistema de Doações](screenshots/doacaopix.png)
+
+### 👤 Perfil do Usuário
+
+![Perfil do Usuário](screenshots/perfil.png)
+
+### ⚙️ Painel Administrativo
+
+#### Gerenciar Animais
+![Admin Animais](screenshots/admin_animais.png)
+
+#### Gerenciar Adoções
+![Admin Adoções](screenshots/admin_adocoes.png)
+
+#### Gerenciar Doações
+![Admin Doações](screenshots/admin_doacoes.png)
+
+### 🔐 Modal de Login/Cadastro
+
+![Login](screenshots/login.png)
 
 🤝 Contribuindo
 Contribuições são bem-vindas! Para contribuir:

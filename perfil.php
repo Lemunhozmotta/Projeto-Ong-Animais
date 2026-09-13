@@ -120,7 +120,6 @@ $doacoes = $resultado->fetch_all(MYSQLI_ASSOC);
         <main>
             <div class="perfil-container">
                 <a href="javascript:history.back()" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
-                Voltar</a>
 
                 <div class="perfil-header">
                     <h1><i class="fas fa-user-circle"></i> Meu Perfil</h1>

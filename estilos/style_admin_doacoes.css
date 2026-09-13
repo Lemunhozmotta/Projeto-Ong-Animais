@@ -1,0 +1,393 @@
+/* ============================================
+   ADMIN DOAÇÕES
+   ============================================ */
+
+.admin-doacoes-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.admin-doacoes-header {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admin-doacoes-header h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.admin-doacoes-header h1 i {
+    color: #ff6b35;
+    margin-right: 10px;
+}
+
+.badge-pendente-count {
+    background: #ffc107;
+    color: #333;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Filtros */
+.filtros-doacoes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.filtro-btn:hover {
+    border-color: #008b8b;
+    color: #008b8b;
+}
+
+.filtro-btn.ativo {
+    background: #008b8b;
+    color: white;
+    border-color: #008b8b;
+}
+
+/* Lista */
+.lista-doacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-doacao {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #ffc107;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-doacao.confirmado {
+    border-left-color: #28a745;
+}
+
+.card-doacao.cancelado {
+    border-left-color: #dc3545;
+}
+
+.card-doacao-conteudo {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 80px 1fr 180px;
+    gap: 25px;
+    align-items: center;
+}
+
+.card-doacao-icone {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.card-doacao-icone.dinheiro {
+    background: #d4edda;
+    color: #28a745;
+}
+
+.card-doacao-icone.item {
+    background: #fff3cd;
+    color: #ff6b35;
+}
+
+.card-doacao-info {
+    min-width: 0;
+}
+
+.card-doacao-info h3 {
+    margin: 0 0 10px 0;
+    color: #1a1a2e;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-doacao-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.card-doacao-info p strong {
+    color: #1a1a2e;
+}
+
+.card-doacao-info p i {
+    color: #008b8b;
+    width: 18px;
+    text-align: center;
+}
+
+.valor-destaque {
+    color: #28a745;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card-doacao-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-confirmar,
+.btn-excluir {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.btn-confirmar {
+    background: #28a745;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-excluir {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Badge de status */
+.badge-status {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-status.pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-status.confirmado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-status.cancelado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Vazio */
+.vazio-doacoes {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    color: #999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.vazio-doacoes i {
+    font-size: 4rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.vazio-doacoes p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Modal de confirmação */
+.modal-confirmacao {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-confirmacao-conteudo {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-confirmacao-conteudo .icone-modal {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+}
+
+.modal-confirmacao-conteudo .icone-modal.sucesso {
+    background: #d4edda;
+    color: #28a745;
+}
+
+.modal-confirmacao-conteudo .icone-modal.perigo {
+    background: #f8d7da;
+    color: #dc3545;
+}
+
+.modal-confirmacao-conteudo h3 {
+    margin: 0 0 10px 0;
+    color: #1a1a2e;
+    font-size: 20px;
+}
+
+.modal-confirmacao-conteudo p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-botoes button,
+.modal-botoes a {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.modal-botoes .btn-cancelar {
+    background: #6c757d;
+    color: white;
+}
+
+.modal-botoes .btn-cancelar:hover {
+    background: #5a6268;
+}
+
+.modal-botoes .btn-confirmar-modal {
+    background: #28a745;
+    color: white;
+}
+
+.modal-botoes .btn-confirmar-modal:hover {
+    background: #218838;
+}
+
+.modal-botoes .btn-excluir-modal {
+    background: #dc3545;
+    color: white;
+}
+
+.modal-botoes .btn-excluir-modal:hover {
+    background: #c82333;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .card-doacao-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .card-doacao-icone {
+        margin: 0 auto;
+    }
+
+    .card-doacao-acoes {
+        flex-direction: row;
+    }
+
+    .card-doacao-acoes button {
+        flex: 1;
+    }
+
+    .card-doacao-info h3 {
+        justify-content: center;
+    }
+
+    .admin-doacoes-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filtros-doacoes {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,182 @@
+.contato-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.contato-header {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contato-header h1 {
+    font-size: 32px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.contato-header h1 i {
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+.contato-header p {
+    color: #666;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contato-info-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contato-info-box h2 {
+    font-size: 22px;
+    color: #1a1a2e;
+    border-bottom: 2px solid #008b8b;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.contato-info-box h2 i {
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.contato-item:last-child {
+    border-bottom: none;
+}
+
+.contato-item i {
+    font-size: 1.5rem;
+    color: #008b8b;
+    min-width: 35px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.contato-item strong {
+    display: block;
+    color: #1a1a2e;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.contato-item span {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contato-form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contato-form-box h2 {
+    font-size: 22px;
+    color: #1a1a2e;
+    border-bottom: 2px solid #008b8b;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.contato-form-box h2 i {
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+.contato-form-box .form-group {
+    margin-bottom: 18px;
+}
+
+.contato-form-box .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 14px;
+}
+
+.contato-form-box .form-group input,
+.contato-form-box .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.contato-form-box .form-group input:focus,
+.contato-form-box .form-group textarea:focus {
+    outline: none;
+    border-color: #008b8b;
+}
+
+.contato-form-box .form-group textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: #008b8b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #006666;
+}
+
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-header {
+        padding: 25px 20px;
+    }
+
+    .contato-header h1 {
+        font-size: 24px;
+    }
+
+    .contato-info-box,
+    .contato-form-box {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,20 @@
+# Variáveis de ambiente (NUNCA subir)
+.env
+
+# Pasta do Composer (regenerada com 'composer install')
+/vendor/
+
+# Configurações do editor
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Uploads de teste
+/uploads/animais/*
+!/uploads/animais/.gitkeep
+
+# Logs
+*.log

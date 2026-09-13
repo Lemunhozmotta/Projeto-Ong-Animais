@@ -1,0 +1,116 @@
+.doar-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.doar-box {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.doar-box h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+    text-align: center;
+}
+
+.doar-box h1 i {
+    color: #ff6b35;
+    margin-right: 10px;
+}
+
+.doar-box p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #008b8b;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-doar {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-doar:hover {
+    background: #e55a2b;
+}
+
+.campo-dinheiro,
+.campo-item {
+    display: none;
+}
+
+.campo-dinheiro.ativo,
+.campo-item.ativo {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .doar-box {
+        padding: 25px;
+    }
+
+    .doar-box h1 {
+        font-size: 22px;
+    }
+}
+
+/* Campo de agendamento */
+#campoAgendamento {
+    display: none;
+}
+
+#campoAgendamento.ativo {
+    display: block;
+}
+
+/* Responsividade do modal de sucesso */
+@media (max-width: 480px) {
+    #modalSucesso>div {
+        padding: 25px 20px !important;
+    }
+}

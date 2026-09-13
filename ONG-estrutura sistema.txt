@@ -1,0 +1,41 @@
+ONG
+│
+│________USUARIOS
+│       │-----id_usuario INT NOT NULL AUTO_INCREMENTE
+│       │-----id_departamento INT
+│       │-----nome VARCHAR(30)
+│       │-----data_nascimento DATE
+│       │-----endereco VARCHAR(50)
+│       │-----telefone VARCHAR(40)
+│       │-----email VARCHAR(50)
+│
+│________DEPARTAMENTOS
+│       │-----id_departamento INT NOT NULL AUTO_INCREMENTE
+│       │-----nome VARCHAR(30)
+│
+│________ANIMAIS
+│       │-----id_animal INT NOT NULL AUTO_INCREMENTE
+│       │-----id_usuario INT
+│       │-----nome VARCHAR(30)
+│       │-----espécie ENUM('gato','cao')
+│       │-----porte ENUM('pequeno','medio','grande')
+│       │-----data_acolhimento DATE
+│       │-----idade aparente ENUM('filhote','adulto','idoso')
+│       │-----saúde TEXT
+│
+│________ADOCOES
+│       │-----id_adocao INT NOT NULL AUTO_INCREMENTE
+│       │-----id_usuario INT NOT NULL
+│       │-----id_animal INT NOT NULL
+│       │-----data DATE
+│       │-----descrição TEST
+│
+│________DOACOES
+│       │-----id_doacao INT NOT NULL AUTO_INCREMENTE
+│       │-----id_usuario INT NOT NULL
+│       │-----tipo ENUM('dinheiro', 'item')
+│       │-----quantidade INT
+│       │-----valor INT
+│       │-----data DATE
+│       │-----descrição TEXT
+│_

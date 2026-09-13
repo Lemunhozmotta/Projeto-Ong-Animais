@@ -1,0 +1,20 @@
+{
+    "name": "leandro/apvac-ong-animais",
+    "description": "Sistema de gestão para ONG de proteção animal - APVAC",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leandro Munhoz Motta",
+            "email": "lemmuzmotta@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^7.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

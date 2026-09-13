@@ -1,0 +1,172 @@
+.perfil-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.perfil-header {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.perfil-header h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+}
+
+.perfil-header h1 i {
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+.perfil-header .dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+    margin-top: 15px;
+}
+
+.perfil-header .dados p {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-left: 3px solid #008b8b;
+    color: #444;
+}
+
+.perfil-header .dados p strong {
+    color: #1a1a2e;
+    min-width: 90px;
+    display: inline-block;
+}
+
+.secao {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.secao h2 {
+    font-size: 22px;
+    color: #1a1a2e;
+    border-bottom: 2px solid #008b8b;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.secao h2 i {
+    margin-right: 10px;
+}
+
+.item-lista {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-lista:last-child {
+    border-bottom: none;
+}
+
+.item-lista .info {
+    flex: 1;
+}
+
+.item-lista .info strong {
+    color: #1a1a2e;
+    font-size: 16px;
+}
+
+.item-lista .info .detalhe {
+    color: #666;
+    font-size: 14px;
+}
+
+.item-lista .info .data {
+    font-size: 13px;
+    color: #999;
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-concluido {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.badge-rejeitado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.vazio {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.vazio i {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.vazio a {
+    color: #008b8b;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .perfil-header .dados {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-header {
+        padding: 20px;
+    }
+
+    .perfil-header h1 {
+        font-size: 22px;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+
+    .secao h2 {
+        font-size: 19px;
+    }
+
+    .item-lista {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

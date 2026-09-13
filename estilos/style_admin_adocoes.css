@@ -1,0 +1,322 @@
+/* ============================================
+   ADMIN ADOÇÕES
+   ============================================ */
+
+.admin-adocoes-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.admin-adocoes-header {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admin-adocoes-header h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.admin-adocoes-header h1 i {
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+.badge-pendente-count {
+    background: #ffc107;
+    color: #333;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.lista-adocoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-adocao {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #ffc107;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-adocao.aprovado {
+    border-left-color: #28a745;
+}
+
+.card-adocao.rejeitado {
+    border-left-color: #dc3545;
+}
+
+.card-adocao.concluido {
+    border-left-color: #17a2b8;
+}
+
+.card-adocao-conteudo {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 120px 1fr 180px;
+    gap: 25px;
+    align-items: center;
+}
+
+.card-adocao-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 2.5rem;
+    color: #adb5bd;
+    flex-shrink: 0;
+}
+
+.card-adocao-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-adocao-info {
+    min-width: 0;
+}
+
+.card-adocao-info h3 {
+    margin: 0 0 10px 0;
+    color: #1a1a2e;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-adocao-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.card-adocao-info p strong {
+    color: #1a1a2e;
+}
+
+.card-adocao-info p i {
+    color: #008b8b;
+    width: 18px;
+    text-align: center;
+}
+
+.card-adocao-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-aprovar,
+.btn-rejeitar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.btn-aprovar {
+    background: #28a745;
+    color: white;
+}
+
+.btn-aprovar:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-rejeitar {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-rejeitar:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-status.pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-status.aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-status.rejeitado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.badge-status.concluido {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.vazio-adocoes {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    color: #999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.vazio-adocoes i {
+    font-size: 4rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.vazio-adocoes p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ============================================
+   MODAL OBSERVAÇÃO
+   ============================================ */
+
+.modal-observacao {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-observacao-conteudo {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 92%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-observacao-conteudo h3 {
+    margin: 0 0 15px 0;
+    color: #1a1a2e;
+    font-size: 20px;
+}
+
+.modal-observacao-conteudo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    min-height: 100px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.modal-observacao-conteudo textarea:focus {
+    outline: none;
+    border-color: #008b8b;
+}
+
+.modal-botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-botoes button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.modal-botoes button:hover {
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .card-adocao-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .card-adocao-foto {
+        margin: 0 auto;
+    }
+
+    .card-adocao-acoes {
+        flex-direction: row;
+    }
+
+    .card-adocao-acoes button {
+        flex: 1;
+    }
+
+    .card-adocao-info h3 {
+        justify-content: center;
+    }
+
+    .admin-adocoes-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

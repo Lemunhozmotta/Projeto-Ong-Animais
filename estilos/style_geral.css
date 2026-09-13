@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+}
+
+.header {
+    background: #1a1a2e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+#logoMenu {
+    height: 100px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #00d4ff;
+}
+
+.header .acesso {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .acesso span {
+    color: white;
+    font-weight: 500;
+}
+
+.header .acesso a,
+#abrirLogin {
+    background: white;
+    color: #1a1a2e;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .acesso .btn-sair {
+    background: #dc3545;
+    color: white;
+}
+
+main {
+    background-color: #f0f2f5;
+    padding: 20px 0;
+    min-height: calc(100vh - 200px);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+section.module.parallax1 {
+    background-image: url('../img/parallaxCao.jpg');
+}
+
+section.module.parallax2 {
+    background-image: url('../img/parallaxGato.webp');
+}
+
+section.module.parallax3 {
+    background-image: url('../img/parallax3.png');
+}
+
+section.module.parallax h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    z-index: 2;
+    font-weight: 800;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+}
+
+section.module.content {
+    padding: 50px 0;
+    background-color: white;
+}
+
+section.module.content:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+section.module h2 {
+    font-size: 30px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #008b8b;
+}
+
+section.module p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.video {
+    background: #1a1a2e;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background: #1a1a2e;
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: #6c757d;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #5a6268;
+    transform: translateX(-3px);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    #logoMenu {
+        height: 70px;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .menu li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .header .acesso {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .header .acesso a,
+    #abrirLogin {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.module.parallax {
+        height: 50vh;
+    }
+
+    section.module.parallax h1 {
+        font-size: 32px;
+    }
+
+    section.module h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    section.module.parallax h1 {
+        font-size: 24px;
+    }
+}
+
+/* ============================================
+   MENU DROPDOWN ADMIN
+   ============================================ */
+
+.menu .dropdown {
+    position: relative;
+    padding-bottom: 15px;
+    /* Ponte para o mouse não perder o foco */
+    margin-bottom: -15px;
+    /* Compensa o padding */
+}
+
+.menu .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu .dropdown-toggle::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 11px;
+    margin-left: 3px;
+    transition: transform 0.3s;
+}
+
+.menu .dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 220px;
+    padding: 8px 0;
+    z-index: 1000;
+    margin-top: 0;
+    /* Sem margem para não criar gap */
+    list-style: none;
+    padding-top: 15px;
+    /* Compensa a ponte */
+}
+
+.menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu .dropdown-menu li {
+    margin: 0;
+    list-style: none;
+}
+
+.menu .dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.menu .dropdown-menu a:hover {
+    background: #f0f7f7;
+    color: #008b8b;
+    padding-left: 25px;
+}
+
+.menu .dropdown-menu a i {
+    width: 20px;
+    margin-right: 8px;
+    color: #008b8b;
+}
+
+.menu .dropdown-menu .badge-notif {
+    background: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.menu .badge-notif-menu {
+    background: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        margin-top: 5px;
+        padding: 0;
+        padding-top: 0;
+    }
+
+    .menu .dropdown-menu a {
+        color: white;
+        padding: 10px 15px;
+    }
+
+    .menu .dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #00d4ff;
+        padding-left: 15px;
+    }
+
+    .menu .dropdown-menu a i {
+        color: #00d4ff;
+    }
+
+    .menu .dropdown {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Badge de notificação no menu Admin */
+.menu .badge-notif-menu {
+    background: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        margin-top: 5px;
+        padding: 0;
+    }
+
+    .menu .dropdown-menu a {
+        color: white;
+        padding: 10px 15px;
+    }
+
+    .menu .dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #00d4ff;
+        padding-left: 15px;
+    }
+
+    .menu .dropdown-menu a i {
+        color: #00d4ff;
+    }
+}

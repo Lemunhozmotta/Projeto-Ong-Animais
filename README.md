@@ -38,28 +38,29 @@ Este sistema foi desenvolvido para automatizar e facilitar a gestão da ONG, ofe
 
 ## 📁 Estrutura do Projeto
 
+```
 Projeto-Ong-Animais/
 ├── estilos/
-│ ├── style_geral.css
-│ ├── style_index.css
-│ ├── style_sobre.css
-│ ├── style_projetos.css
-│ ├── style_doar.css
-│ ├── style_contato.css
-│ ├── style_perfil.css
-│ ├── style_admin.css
-│ ├── style_admin_usuarios.css
-│ ├── style_admin_adocoes.css
-│ ├── style_admin_doacoes.css
-│ └── style_recuperar.css
+│   ├── style_geral.css
+│   ├── style_index.css
+│   ├── style_sobre.css
+│   ├── style_projetos.css
+│   ├── style_doar.css
+│   ├── style_contato.css
+│   ├── style_perfil.css
+│   ├── style_admin.css
+│   ├── style_admin_usuarios.css
+│   ├── style_admin_adocoes.css
+│   ├── style_admin_doacoes.css
+│   └── style_recuperar.css
 ├── img/
-│ ├── logoONG.png
-│ ├── parallaxCao.jpg
-│ ├── parallaxGato.webp
-│ └── parallax3.png
+│   ├── logoONG.png
+│   ├── parallaxCao.jpg
+│   ├── parallaxGato.webp
+│   └── parallax3.png
 ├── uploads/
-│ └── animais/ (fotos dos animais)
-├── vendor/ (dependências do Composer - NÃO subir)
+│   └── animais/           (fotos dos animais)
+├── vendor/                (dependências do Composer - NÃO subir)
 ├── index.php
 ├── sobre.php
 ├── projetos.php
@@ -80,13 +81,14 @@ Projeto-Ong-Animais/
 ├── admin_doacoes.php
 ├── conexao.php
 ├── mailer.php
-├── .env (NÃO subir)
+├── .env                   (NÃO subir)
 ├── .env.example
 ├── .gitignore
 ├── composer.json
 ├── composer.lock
 ├── database.sql
 └── README.md
+```
 
 ---
 
@@ -103,138 +105,161 @@ Projeto-Ong-Animais/
 #### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/Projeto-Ong-Animais.git
+git clone https://github.com/Lemunhozmotta/Projeto-Ong-Animais.git
 cd Projeto-Ong-Animais
+```
 
-2. Instalar dependências do Composer
-bash
+#### 2. Instalar dependências do Composer
+
+```bash
 composer install
+```
+
 Isso instalará o PHPMailer automaticamente.
 
-3. Configurar o banco de dados
-Abra o phpMyAdmin: http://localhost/phpmyadmin
+#### 3. Configurar o banco de dados
 
-Crie um banco de dados chamado ong
+Abra o **phpMyAdmin** em `http://localhost/phpmyadmin`
 
-Importe o arquivo database.sql (está na raiz do projeto)
+Crie um banco de dados chamado **`ong`**
+
+Importe o arquivo **`database.sql`** (está na raiz do projeto)
 
 Ou execute no terminal:
 
-bash
+```bash
 mysql -u root -p ong < database.sql
-4. Configurar o arquivo .env
-Copie o arquivo .env.example e renomeie para .env
+```
+
+#### 4. Configurar o arquivo `.env`
+
+Copie o arquivo `.env.example` e renomeie para `.env`
 
 Edite com suas credenciais:
 
-env
-# Banco de dados
+```env
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=
 DB_NAME=ong
 
-# Configurações de e-mail (Mailtrap para testes)
 MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
 MAIL_USER=seu_username_mailtrap
 MAIL_PASS=sua_senha_mailtrap
 MAIL_FROM=apvac.projeto@protonmail.com
 MAIL_FROM_NAME=APVAC
-5. Ajustar conexao.php
-Edite o arquivo conexao.php com os dados do seu banco:
+```
 
-php
+#### 5. Ajustar `conexao.php`
+
+Edite o arquivo `conexao.php` com os dados do seu banco:
+
+```php
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
 $banco = "ong";
-6. Criar a pasta de uploads
-bash
-mkdir uploads
-mkdir uploads/animais
-Ou crie manualmente pelo explorador de arquivos.
+```
 
-7. Acessar o sistema
+#### 6. Criar a pasta de uploads
+
+Crie manualmente pelo explorador de arquivos:
+
+```
+uploads/animais/
+```
+
+Dentro dela, crie um arquivo vazio chamado `.gitkeep`
+
+#### 7. Acessar o sistema
+
 Abra no navegador:
 
-text
+```
 http://localhost/Projeto-Ong-Animais/
-👤 Usuários Padrão
-Após importar o database.sql, você terá estes usuários para teste:
+```
 
-Email	Senha	Nível
-admin@apvac.org.br	123	1 - Administrador
-valeria_vet@gmail.com	123	2 - Gestor
-maria@email.com	123	3 - Voluntário
-usuario@email.com	123	4 - Usuário
-⚠️ Altere as senhas em produção!
+---
 
-🔐 Níveis de Acesso
-Nível	Nome	O que pode fazer
-1	Administrador	Acesso total (animais, adoções, doações, usuários)
-2	Gestor	Acesso a animais, adoções e doações
-3	Voluntário	Acesso básico (perfil, doar, adoções)
-4	Usuário	Acesso comum (perfil, doar, projetos)
-📧 Configuração de E-mail
-Para o sistema de recuperação de senha funcionar, é necessário configurar um serviço de e-mail.
+## 👤 Usuários Padrão
 
-Opção 1: Mailtrap (Recomendado para desenvolvimento)
-Crie uma conta em mailtrap.io
+Após importar o `database.sql`, você terá estes usuários para teste:
 
-Pegue as credenciais SMTP
+| Email | Senha | Nível |
+|-------|-------|-------|
+| admin@apvac.org.br | 123 | 1 - Administrador |
+| valeria_vet@gmail.com | 123 | 2 - Gestor |
+| maria@email.com | 123 | 3 - Voluntário |
+| usuario@email.com | 123 | 4 - Usuário |
 
-Coloque no .env
+⚠️ **Altere as senhas em produção!**
 
-Opção 2: Brevo, Gmail, etc (Produção)
+---
+
+## 🔐 Níveis de Acesso
+
+| Nível | Nome | O que pode fazer |
+|-------|------|------------------|
+| **1** | Administrador | Acesso total (animais, adoções, doações, usuários) |
+| **2** | Gestor | Acesso a animais, adoções e doações |
+| **3** | Voluntário | Acesso básico (perfil, doar, adoções) |
+| **4** | Usuário | Acesso comum (perfil, doar, projetos) |
+
+---
+
+## 📧 Configuração de E-mail
+
+Para o sistema de **recuperação de senha** funcionar, é necessário configurar um serviço de e-mail.
+
+### Opção 1: Mailtrap (Recomendado para desenvolvimento)
+
+1. Crie uma conta em [mailtrap.io](https://mailtrap.io)
+2. Pegue as credenciais SMTP
+3. Coloque no `.env`
+
+### Opção 2: Brevo, Gmail, etc (Produção)
+
 Para produção, substitua pelas credenciais do seu provedor.
 
-🎯 Funcionalidades
-Para Visitantes
-✅ Ver página inicial com animais disponíveis
+---
 
-✅ Ver informações sobre a ONG
+## 🎯 Funcionalidades
 
-✅ Ver projetos
+### Para Visitantes
+- ✅ Ver página inicial com animais disponíveis
+- ✅ Ver informações sobre a ONG
+- ✅ Ver projetos
+- ✅ Cadastrar-se
 
-✅ Cadastrar-se
+### Para Usuários Logados
+- ✅ Solicitar adoção
+- ✅ Fazer doações (dinheiro via PIX ou itens)
+- ✅ Ver perfil com histórico
+- ✅ Recuperar senha por e-mail
 
-Para Usuários Logados
-✅ Solicitar adoção
+### Para Administradores
+- ✅ Cadastrar/editar/excluir animais
+- ✅ Aprovar/rejeitar adoções
+- ✅ Confirmar/excluir doações
+- ✅ Gerenciar usuários e níveis de acesso
 
-✅ Fazer doações (dinheiro via PIX ou itens)
+---
 
-✅ Ver perfil com histórico
+## 🛠️ Tecnologias e Boas Práticas
 
-✅ Recuperar senha por e-mail
+- ✅ **Separação de CSS** — Um arquivo para cada página
+- ✅ **Níveis de Acesso** — Sistema de permissões robusto
+- ✅ **Senhas Criptografadas** — Uso de `password_hash()`
+- ✅ **Tokens Seguros** — Recuperação de senha com `random_bytes()`
+- ✅ **Proteção contra SQL Injection** — Uso de `prepare()` e `bind_param()`
+- ✅ **Variáveis de Ambiente** — Uso de `.env` para credenciais
+- ✅ **Upload Seguro** — Validação de tipo e tamanho de arquivo
+- ✅ **Transações** — Uso de `begin_transaction()` para operações críticas
 
-Para Administradores
-✅ Cadastrar/editar/excluir animais
+---
 
-✅ Aprovar/rejeitar adoções
-
-✅ Confirmar/excluir doações
-
-✅ Gerenciar usuários e níveis de acesso
-
-🛠️ Tecnologias e Boas Práticas
-✅ Separação de CSS — Um arquivo para cada página
-
-✅ Níveis de Acesso — Sistema de permissões robusto
-
-✅ Senhas Criptografadas — Uso de password_hash()
-
-✅ Tokens Seguros — Recuperação de senha com random_bytes()
-
-✅ Proteção contra SQL Injection — Uso de prepare() e bind_param()
-
-✅ Variáveis de Ambiente — Uso de .env para credenciais
-
-✅ Upload Seguro — Validação de tipo e tamanho de arquivo
-
-✅ Transações — Uso de begin_transaction() para operações críticas
-
-📸 Screenshots
+## 📸 Screenshots
 
 ### 🏠 Página Inicial
 
@@ -244,61 +269,70 @@ Para Administradores
 
 ![Sistema de Adoção](screenshots/adocao.png)
 
-### 💰 Sistema de Doações 
+### 💰 Sistema de Doações
 
 ![Sistema de Doações](screenshots/doacao.png)
 
 ### 💰 Sistema de Doações com PIX
 
-![Sistema de Doações](screenshots/doacaopix.png)
+![Doações PIX](screenshots/doacaopix.png)
 
 ### 👤 Perfil do Usuário
 
 ![Perfil do Usuário](screenshots/perfil.png)
 
-### ⚙️ Painel Administrativo
-
-#### Gerenciar Animais
-![Admin Animais](screenshots/admin_animais.png)
-
-#### Gerenciar Adoções
-![Admin Adoções](screenshots/admin_adocoes.png)
-
-#### Gerenciar Doações
-![Admin Doações](screenshots/admin_doacoes.png)
-
-### 🔐 Modal de Login/Cadastro
+### 🔐 Modal de Login
 
 ![Login](screenshots/login.png)
 
-🤝 Contribuindo
+### ⚙️ Painel Administrativo - Animais
+
+![Admin Animais](screenshots/admin_animais.png)
+
+### ⚙️ Painel Administrativo - Adoções
+
+![Admin Adoções](screenshots/admin_adocoes.png)
+
+### ⚙️ Painel Administrativo - Doações
+
+![Admin Doações](screenshots/admin_doacoes.png)
+
+---
+
+## 🤝 Contribuindo
+
 Contribuições são bem-vindas! Para contribuir:
 
-Faça um Fork do projeto
+1. Faça um Fork do projeto
+2. Crie uma branch: `git checkout -b minha-feature`
+3. Commit suas mudanças: `git commit -m 'Adiciona nova funcionalidade'`
+4. Push para a branch: `git push origin minha-feature`
+5. Abra um Pull Request
 
-Crie uma branch: git checkout -b minha-feature
+---
 
-Commit suas mudanças: git commit -m 'Adiciona nova funcionalidade'
+## 📝 Licença
 
-Push para a branch: git push origin minha-feature
+Este projeto está sob a licença MIT.
 
-Abra um Pull Request
+---
 
-📝 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+## 👨‍💻 Autor
 
-👨‍💻 Autor
-Leandro Munhoz Motta
+**Leandro Munhoz Motta**
 
-GitHub: @seu-usuario
+- GitHub: [@Lemunhozmotta](https://github.com/Lemunhozmotta)
 
-LinkedIn: seu-perfil
+---
 
-🙏 Agradecimentos
-APVAC — Por inspirar este projeto
+## 🙏 Agradecimentos
 
-Comunidade PHP — Por todas as bibliotecas e documentação
+- **APVAC** — Por inspirar este projeto
+- **Comunidade PHP** — Por todas as bibliotecas e documentação
+- **Mailtrap** — Pela ferramenta de teste de e-mails
 
-Mailtrap — Pela ferramenta de teste de e-mails
+---
 
-<p align="center"> Feito com ❤️ para ajudar os animais 🐾 </p>
+<p align="center">
+  Feito com ❤️ para ajudar os animais 🐾
+</p>

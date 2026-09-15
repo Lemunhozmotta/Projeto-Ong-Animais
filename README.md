@@ -2,6 +2,8 @@
 
 Sistema web completo para gestão de ONGs de proteção animal, desenvolvido em PHP com MySQL. Permite gerenciar animais, adoções, doações, usuários e muito mais.
 
+🌐 **Site Online:** [http://apvac-ong.wuaze.com](http://apvac-ong.wuaze.com)
+
 ![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Composer](https://img.shields.io/badge/Composer-2.x-885630?style=for-the-badge&logo=composer&logoColor=white)

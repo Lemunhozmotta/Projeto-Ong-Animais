@@ -66,6 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $token_valido) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logoONG_icon.png">
     <link rel="stylesheet" href="estilos/style_geral.css">
     <link rel="stylesheet" href="estilos/style_recuperar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -103,44 +104,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $token_valido) {
                     <h1><i class="fas fa-lock"></i> Redefinir Senha</h1>
 
                     <?php if ($token_valido): ?>
-                        <p class="subtitulo">Olá, <strong><?php echo htmlspecialchars($usuario['nome']); ?></strong>! Crie
-                            sua nova senha abaixo.</p>
+                    <p class="subtitulo">Olá, <strong><?php echo htmlspecialchars($usuario['nome']); ?></strong>! Crie
+                        sua nova senha abaixo.</p>
 
-                        <?php if ($mensagem): ?>
-                            <div class="<?php echo $tipo_mensagem == 'sucesso' ? 'resultado-sucesso' : 'resultado-erro'; ?>">
-                                <?php echo $mensagem; ?>
-                            </div>
-                        <?php endif; ?>
+                    <?php if ($mensagem): ?>
+                    <div class="<?php echo $tipo_mensagem == 'sucesso' ? 'resultado-sucesso' : 'resultado-erro'; ?>">
+                        <?php echo $mensagem; ?>
+                    </div>
+                    <?php endif; ?>
 
-                        <form method="POST" autocomplete="off">
-                            <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
+                    <form method="POST" autocomplete="off">
+                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
 
-                            <div class="form-group">
-                                <label>Nova Senha * (mínimo 6 caracteres)</label>
-                                <input type="password" name="nova_senha" required minlength="6"
-                                    placeholder="Digite a nova senha">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Confirmar Nova Senha *</label>
-                                <input type="password" name="confirmar_senha" required minlength="6"
-                                    placeholder="Repita a nova senha">
-                            </div>
-
-                            <button type="submit" class="btn-recuperar">
-                                <i class="fas fa-check"></i> Salvar Nova Senha
-                            </button>
-                        </form>
-                    <?php else: ?>
-                        <div class="resultado-erro">
-                            <i class="fas fa-exclamation-circle"></i>
-                            <?php echo $mensagem; ?>
+                        <div class="form-group">
+                            <label>Nova Senha * (mínimo 6 caracteres)</label>
+                            <input type="password" name="nova_senha" required minlength="6"
+                                placeholder="Digite a nova senha">
                         </div>
 
-                        <a href="recuperar_senha.php" class="btn-recuperar"
-                            style="display: block; text-align: center; text-decoration: none; margin-top: 20px;">
-                            <i class="fas fa-redo"></i> Solicitar Novo Link
-                        </a>
+                        <div class="form-group">
+                            <label>Confirmar Nova Senha *</label>
+                            <input type="password" name="confirmar_senha" required minlength="6"
+                                placeholder="Repita a nova senha">
+                        </div>
+
+                        <button type="submit" class="btn-recuperar">
+                            <i class="fas fa-check"></i> Salvar Nova Senha
+                        </button>
+                    </form>
+                    <?php else: ?>
+                    <div class="resultado-erro">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <?php echo $mensagem; ?>
+                    </div>
+
+                    <a href="recuperar_senha.php" class="btn-recuperar"
+                        style="display: block; text-align: center; text-decoration: none; margin-top: 20px;">
+                        <i class="fas fa-redo"></i> Solicitar Novo Link
+                    </a>
                     <?php endif; ?>
 
                     <div class="voltar-login">

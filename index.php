@@ -40,6 +40,7 @@ $nome_nivel = getNomeNivel($nivel_usuario);
     <link rel="stylesheet" href="estilos/style_geral.css">
     <link rel="stylesheet" href="estilos/style_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../Projeto-Ong-Animais/img/logoONG-icon.ico">
     <title>APVAC - Associação Proteção à Vida Animal Cubatão</title>
 </head>
 

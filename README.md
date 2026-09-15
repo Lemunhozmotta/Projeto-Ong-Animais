@@ -222,6 +222,15 @@ Para o sistema de **recuperação de senha** funcionar, é necessário configura
 
 Para produção, substitua pelas credenciais do seu provedor.
 
+## ⚠️ Notas sobre a Hospedagem
+
+A versão online (hospedada na InfinityFree) tem uma limitação:
+**O envio de e-mails é simulado**, porque a InfinityFree bloqueia
+conexões SMTP externas em contas gratuitas.
+
+**Em ambiente local (XAMPP)**, o envio de e-mails funciona
+normalmente via Mailtrap.
+
 ---
 
 ## 🎯 Funcionalidades
